@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@400;500;600;700;800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Syne', sans-serif;
+
+  --color-brand-bg: #f7f7f5;
+  --color-brand-text: #121212;
+  --color-brand-accent: #4f46e5;
+  --color-brand-muted: #6b7280;
+}
+
+@layer base {
+  html {
+    font-family: var(--font-sans);
+    background-color: var(--color-brand-bg);
+    color: var(--color-brand-text);
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    text-transform: uppercase;
+  }
+  
+  ::selection {
+    background-color: var(--color-brand-text);
+    color: var(--color-brand-bg);
+  }
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px var(--color-brand-text);
+  color: transparent;
+}
+
+.text-stroke-accent {
+  -webkit-text-stroke: 1px var(--color-brand-accent);
+  color: transparent;
+}
